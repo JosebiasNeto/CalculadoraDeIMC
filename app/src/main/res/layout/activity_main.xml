@@ -50,10 +50,10 @@
         android:id="@+id/tv_mensagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Informe seu Peso e Altura"
+        android:text=""
         android:textSize="24sp"
         android:textColor="@color/dark_blue"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="30dp"/>
 
 </LinearLayout>

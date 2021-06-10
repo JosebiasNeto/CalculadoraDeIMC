@@ -31,5 +31,24 @@ class MainActivity : AppCompatActivity() {
     }
     private fun CalculoDeIMC(){
 
+        val pesoID = binding.editPeso
+        val alturaID = binding.editAltura
+        val peso = Integer.parseInt(pesoID.text.toString())
+        val altura = java.lang.Float.parseFloat(alturaID.text.toString())
+        val resultado = binding.tvMensagem
+        val imc = peso / (altura * altura)
+
+        val Mensagem = when{
+            imc <= 18.5 -> "Peso Baixo"
+            imc <= 24.9 -> "Peso Normal"
+            imc <= 29.9 -> "Sobrepeso"
+            imc <= 34.9 -> "Obesidade (Grau 1)"
+            imc <= 39.9 -> "Obesidade Severa (Grau 2)"
+            else -> "Obesidade Mórbida (Grau 3)"
+        }
+
+        imc.toString()
+        resultado.setText("IMC: $imc \n $Mensagem")
+
     }
 }
